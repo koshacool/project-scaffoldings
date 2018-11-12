@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack-dev-server --config ./webpack/webpack.dev.js --open HOST=0.0.0.0",
     "test": "jest",
+    "test:watch": "jest --watch",
     "lint": "eslint ./src",
+    "lint:fix": "eslint --fix ./src",
     "lint:watch": "esw --watch",
     "stylelint": "stylelint './src/**/*.css'",
     "precommit": "npm run lint && npm run stylelint",
@@ -23,6 +25,11 @@
   },
   "homepage": "https://github.com/front-camp-2018/project-scaffoldings#readme",
   "devDependencies": {
+    "@babel/core": "*",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/preset-env": "*",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "*",
     "css-loader": "^1.0.0",
     "eslint": "^5.6.1",
     "eslint-plugin-jest": "^21.25.1",
